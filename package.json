@@ -1,16 +1,81 @@
 {
-  "name": "@ds3nx",
+  "name": "@ds3nx/root",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "description": "A custom DS3 NX plugins",
+  "author": {
+    "name": "Julián Mulet",
+    "url": "https://github.com/uxtechie"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ds3engine/nx"
+  },
+  "bugs": {
+    "url": "https://github.com/ds3engine/nx/issues"
+  },
+  "keywords": [
+    "nx",
+    "nx-plugin",
+    "monorepo",
+    "preact"
+  ],
   "private": true,
-  "dependencies": {},
+  "scripts": {
+    "build-all": "nx run-many --target build --all --parallel 8 --exclude utils-testing",
+    "commit": "git-cz",
+    "check-commit": "node ./tools/scripts/commit-lint.js",
+    "check-format": "nx format:check --all",
+    "check-lock-files": "node ./tools/scripts/check-lock-files.js",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "is-ci || husky install"
+  },
   "devDependencies": {
-    "@nrwl/js": "15.4.4",
+    "@nrwl/devkit": "15.4.X",
+    "@nrwl/eslint-plugin-nx": "15.4.X",
+    "@nrwl/jest": "15.4.X",
+    "@nrwl/js": "15.4.X",
+    "@nrwl/linter": "15.4.X",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/workspace": "15.4.4",
-    "nx": "15.4.4",
-    "prettier": "^2.6.2",
-    "typescript": "~4.8.2"
+    "@nrwl/nx-plugin": "15.4.X",
+    "@nrwl/workspace": "15.4.X",
+    "@swc-node/register": "1.5.X",
+    "@swc/cli": "0.1.X",
+    "@swc/core": "1.3.X",
+    "@swc/jest": "0.2.X",
+    "@types/jest": "28.1.X",
+    "@types/node": "16.11.X",
+    "@typescript-eslint/eslint-plugin": "5.48.X",
+    "@typescript-eslint/parser": "5.48.X",
+    "eslint": "8.15.X",
+    "eslint-config-prettier": "8.1.X",
+    "jest": "28.1.X",
+    "jest-environment-jsdom": "28.1.X",
+    "jsonc-eslint-parser": "2.1.X",
+    "nx": "15.4.X",
+    "prettier": "2.8.X",
+    "ts-jest": "28.0.X",
+    "ts-node": "10.9.X",
+    "typescript": "4.9.X",
+    "all-contributors-cli": "6.24.X",
+    "commitizen": "4.2.X",
+    "cz-customizable": "7.0.X",
+    "lockfile-lint": "4.10.X",
+    "pretty-quick": "3.1.X",
+    "husky": "8.0.X",
+    "is-ci": "3.0.X"
+  },
+  "dependencies": {
+    "@swc/helpers": "0.4.X",
+    "tslib": "2.4.X"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=7.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }

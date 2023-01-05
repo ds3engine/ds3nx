@@ -1,0 +1,12 @@
+{
+  "eslint.validate": ["json"],
+  "cSpell.words": [
+    "cacheable",
+    "devkit",
+    "esnext",
+    "nrwl",
+    "pnpm",
+    "preact",
+    "preinstall"
+  ]
+}

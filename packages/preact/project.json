@@ -1,0 +1,61 @@
+{
+  "name": "preact",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/preact/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/preact",
+        "main": "packages/preact/src/index.ts",
+        "tsConfig": "packages/preact/tsconfig.lib.json",
+        "assets": [
+          "packages/preact/*.md",
+          {
+            "input": "./packages/preact/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/preact/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/preact",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/preact",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/preact/**/*.ts",
+          "packages/preact/generators.json",
+          "packages/preact/executors.json",
+          "packages/preact/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/preact/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["type:plugin"]
+}

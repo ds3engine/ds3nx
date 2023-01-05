@@ -1,0 +1,32 @@
+{
+  "projectName": "@ds3nx",
+  "projectOwner": "ds3engine",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "uxtechie",
+      "name": "Julián Mulet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8160869?v=4",
+      "profile": "https://www.linkedin.com/in/julianmulet/",
+      "contributions": [
+        "code",
+        "tool",
+        "review",
+        "ideas",
+        "infra",
+        "maintenance",
+        "projectManagement",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 6,
+  "linkToUsage": true
+}
