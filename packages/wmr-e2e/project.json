@@ -1,17 +1,17 @@
 {
-  "name": "preact-e2e",
+  "name": "wmr-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/preact-e2e/src",
+  "sourceRoot": "packages/wmr-e2e/src",
   "targets": {
     "e2e": {
       "executor": "@nrwl/nx-plugin:e2e",
       "options": {
-        "target": "preact:build",
-        "jestConfig": "packages/preact-e2e/jest.config.ts"
+        "target": "wmr:build",
+        "jestConfig": "packages/wmr-e2e/jest.config.ts"
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["preact"]
+  "implicitDependencies": ["wmr"]
 }

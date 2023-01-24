@@ -2,11 +2,11 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { PreactGeneratorSchema } from './schema';
+import { WmrGeneratorSchema } from './schema';
 
-describe('preact generator', () => {
+describe('wmr generator', () => {
   let appTree: Tree;
-  const options: PreactGeneratorSchema = { name: 'test' };
+  const options: WmrGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();

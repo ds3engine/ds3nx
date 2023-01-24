@@ -8,9 +8,9 @@ import {
   Tree,
 } from '@nrwl/devkit';
 import * as path from 'path';
-import { PreactGeneratorSchema } from './schema';
+import { WmrGeneratorSchema } from './schema';
 
-interface NormalizedSchema extends PreactGeneratorSchema {
+interface NormalizedSchema extends WmrGeneratorSchema {
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
@@ -19,7 +19,7 @@ interface NormalizedSchema extends PreactGeneratorSchema {
 
 function normalizeOptions(
   tree: Tree,
-  options: PreactGeneratorSchema
+  options: WmrGeneratorSchema
 ): NormalizedSchema {
   const name = names(options.name).fileName;
   const projectDirectory = options.directory
@@ -55,7 +55,7 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
-export default async function (tree: Tree, options: PreactGeneratorSchema) {
+export default async function (tree: Tree, options: WmrGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
   addProjectConfiguration(tree, normalizedOptions.projectName, {
     root: normalizedOptions.projectRoot,
@@ -63,7 +63,7 @@ export default async function (tree: Tree, options: PreactGeneratorSchema) {
     sourceRoot: `${normalizedOptions.projectRoot}/src`,
     targets: {
       build: {
-        executor: '@ds3nx/preact:build',
+        executor: '@ds3nx/wmr:build',
       },
     },
     tags: normalizedOptions.parsedTags,

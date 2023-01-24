@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'preact-e2e',
+  displayName: 'wmr-e2e',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/preact-e2e',
+  coverageDirectory: '../../coverage/packages/wmr-e2e',
 };

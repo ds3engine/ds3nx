@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
-  "$id": "Preact",
+  "$id": "Wmr",
   "title": "",
   "type": "object",
   "properties": {
