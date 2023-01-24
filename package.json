@@ -2,7 +2,7 @@
   "name": "@ds3nx/root",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "DS3 NX plugins",
+  "description": "DS3 Nx plugins",
   "author": {
     "name": "Julián Mulet",
     "url": "https://github.com/uxtechie"
