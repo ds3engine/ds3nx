@@ -35,13 +35,13 @@ To set up a development environment, please follow these steps:
 3. You're done! Run build packages in the repo. Eg:
 
    ```sh
-   pnpm nx build preact
+   pnpm nx build wmr
    ```
 
 4. You can run E2E test for a plugin with:
 
    ```bash
-   pnpm nx e2e preact-e2e
+   pnpm nx e2e wmr-e2e
    ```
 
 ## Issues and feature requests

@@ -6,7 +6,7 @@ import {
   uniq,
 } from '@nrwl/nx-plugin/testing';
 
-describe('preact e2e', () => {
+describe('wmr e2e', () => {
   // Setting up individual workspaces per
   // test can cause e2e runs to take a long time.
   // For this reason, we recommend each suite only
@@ -14,7 +14,7 @@ describe('preact e2e', () => {
   // on a unique project in the workspace, such that they
   // are not dependant on one another.
   beforeAll(() => {
-    ensureNxProject('@ds3nx/preact', 'dist/packages/preact');
+    ensureNxProject('@ds3nx/wmr', 'dist/packages/wmr');
   });
 
   afterAll(() => {
@@ -23,18 +23,18 @@ describe('preact e2e', () => {
     runNxCommandAsync('reset');
   });
 
-  it('should create preact', async () => {
-    const project = uniq('preact');
-    await runNxCommandAsync(`generate @ds3nx/preact:preact ${project}`);
+  it('should create wmr', async () => {
+    const project = uniq('wmr');
+    await runNxCommandAsync(`generate @ds3nx/wmr:wmr ${project}`);
     const result = await runNxCommandAsync(`build ${project}`);
     expect(result.stdout).toContain('Executor ran');
   }, 120000);
 
   describe('--directory', () => {
     it('should create src in the specified directory', async () => {
-      const project = uniq('preact');
+      const project = uniq('wmr');
       await runNxCommandAsync(
-        `generate @ds3nx/preact:preact ${project} --directory subdir`
+        `generate @ds3nx/wmr:wmr ${project} --directory subdir`
       );
       expect(() =>
         checkFilesExist(`libs/subdir/${project}/src/index.ts`)
@@ -44,10 +44,10 @@ describe('preact e2e', () => {
 
   describe('--tags', () => {
     it('should add tags to the project', async () => {
-      const projectName = uniq('preact');
-      ensureNxProject('@ds3nx/preact', 'dist/packages/preact');
+      const projectName = uniq('wmr');
+      ensureNxProject('@ds3nx/wmr', 'dist/packages/wmr');
       await runNxCommandAsync(
-        `generate @ds3nx/preact:preact ${projectName} --tags e2etag,e2ePackage`
+        `generate @ds3nx/wmr:wmr ${projectName} --tags e2etag,e2ePackage`
       );
       const project = readJson(`libs/${projectName}/project.json`);
       expect(project.tags).toEqual(['e2etag', 'e2ePackage']);

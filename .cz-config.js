@@ -15,7 +15,7 @@ module.exports = {
 
   scopes: [
     { name: 'core', description: 'anything @ds3nx core specific' },
-    { name: 'preact', description: 'anything preact specific' },
+    { name: 'wmr', description: 'anything wmr specific' },
     {
       name: 'repo',
       description: 'anything related to managing the repo itself',

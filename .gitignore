@@ -37,3 +37,24 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# NX
+nx-cloud.env
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# eslint cache
+.eslintcache
+
+# npm cache
+.npm
+
+# snyk
+.dccache
+
+# Other
+CHANGELOG.md

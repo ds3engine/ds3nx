@@ -1,35 +1,35 @@
 {
-  "name": "preact",
+  "name": "wmr",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/preact/src",
+  "sourceRoot": "packages/wmr/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/preact",
-        "main": "packages/preact/src/index.ts",
-        "tsConfig": "packages/preact/tsconfig.lib.json",
+        "outputPath": "dist/packages/wmr",
+        "main": "packages/wmr/src/index.ts",
+        "tsConfig": "packages/wmr/tsconfig.lib.json",
         "assets": [
-          "packages/preact/*.md",
+          "packages/wmr/*.md",
           {
-            "input": "./packages/preact/src",
+            "input": "./packages/wmr/src",
             "glob": "**/!(*.ts)",
             "output": "./src"
           },
           {
-            "input": "./packages/preact/src",
+            "input": "./packages/wmr/src",
             "glob": "**/*.d.ts",
             "output": "./src"
           },
           {
-            "input": "./packages/preact",
+            "input": "./packages/wmr",
             "glob": "generators.json",
             "output": "."
           },
           {
-            "input": "./packages/preact",
+            "input": "./packages/wmr",
             "glob": "executors.json",
             "output": "."
           }
@@ -41,10 +41,10 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "packages/preact/**/*.ts",
-          "packages/preact/generators.json",
-          "packages/preact/executors.json",
-          "packages/preact/package.json"
+          "packages/wmr/**/*.ts",
+          "packages/wmr/generators.json",
+          "packages/wmr/executors.json",
+          "packages/wmr/package.json"
         ]
       }
     },
@@ -52,7 +52,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/preact/jest.config.ts",
+        "jestConfig": "packages/wmr/jest.config.ts",
         "passWithNoTests": true
       }
     }

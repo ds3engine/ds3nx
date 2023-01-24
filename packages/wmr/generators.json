@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "wmr",
+  "version": "0.0.1",
+  "generators": {
+    "wmr": {
+      "factory": "./src/generators/wmr/generator",
+      "schema": "./src/generators/wmr/schema.json",
+      "description": "wmr generator"
+    }
+  }
+}

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ds3nx/preact": ["packages/preact/src/index.ts"]
+      "@ds3nx/wmr": ["packages/wmr/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
