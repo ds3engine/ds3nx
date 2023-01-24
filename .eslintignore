@@ -1,0 +1,16 @@
+.husky/
+.vscode/
+.dccache
+.rollup.cache/
+coverage/
+dist
+tmp
+/out-tsc
+node_modules
+.eslintcache
+build/
+tsconfig.tsbuildinfo
+**/*timestamp-*
+!.lintstagedrc.cjs
+!.eslintrc.cjs
+!.prettierrc.cjs

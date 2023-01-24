@@ -2,23 +2,24 @@
   "name": "@ds3nx/root",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "A custom DS3 NX plugins",
+  "description": "DS3 NX plugins",
   "author": {
     "name": "Julián Mulet",
     "url": "https://github.com/uxtechie"
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/ds3engine/nx"
+    "url": "https://github.com/ds3engine/ds3nx"
   },
   "bugs": {
-    "url": "https://github.com/ds3engine/nx/issues"
+    "url": "https://github.com/ds3engine/ds3nx/issues"
   },
   "keywords": [
     "nx",
     "nx-plugin",
     "monorepo",
-    "preact"
+    "preact",
+    "wmr"
   ],
   "private": true,
   "scripts": {
@@ -28,6 +29,7 @@
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm audit",
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
@@ -72,6 +74,9 @@
   "engines": {
     "node": ">=16",
     "pnpm": ">=7.9"
+  },
+  "volta": {
+    "node": "16.17.0"
   },
   "config": {
     "commitizen": {

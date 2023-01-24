@@ -1,37 +1,80 @@
 <p align="center">
-  <a href="https://github.com/ds3engine">
-    <img alt="Design System 3 Logo" src="https://github.com/ds3engine.png" width="100" />
-  </a>
+  <br/>
+  <img width="150" src="https://github.com/ds3engine.png" alt="Design System 3 Logo">
+  <br/>
+  <br/>
 </p>
-<h2 align="center">
-  Design System 3 - NX Plugins
-</h2>
 
----
+<h1 align='center'>Design System 3 | NX Plugins</h1>
 
-[Preact](https://preactjs.com/) plugin for NX
+<div align='center'>
+  The <a href='https://nx.dev/'>NX</a> plugins for <a href='https://github.com/ds3engine'>Design System 3</a>
+  <br><br>
 
----
-
+[![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![CI](https://img.shields.io/github/actions/workflow/status/ds3engine/nx/ci.yml?label=CI&style=flat-square)](https://github.com/ds3engine/nx/actions/workflows/ci.yml)
-![license](https://img.shields.io/github/license/ds3engine/nx?style=flat-square)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ds3engine/nx?style=flat-square)
+[![CI](https://img.shields.io/github/actions/workflow/status/ds3engine/ds3nx/ci.yml?label=CI&style=flat-square)](https://github.com/ds3engine/ds3nx/actions/workflows/ci.yml)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ds3engine/ds3nx?style=flat-square)
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)]()
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![Star on GitHub](https://img.shields.io/github/stars/ds3engine/nx.svg?style=social)](https://github.com/ds3engine/nx/stargazers)
+[![Star on GitHub](https://img.shields.io/github/stars/ds3engine/ds3nx.svg?style=social)](https://github.com/ds3engine/ds3nx/stargazers)
+
+</div>
+
+<h2 align='center'>WARNING: Code is a "work in progress" and is not ready for public use!</h2>
 
 <br/>
 
 ## Available plugins
 
-| 🔌 Plugin                                                                                                                                                                        | 📦 Package                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <a href="https://github.com/ds3engine/nx/tree/main/packages/preact"><img src="https://preactjs.com/assets/branding/symbol.svg" width="24"> Preact</a>                      | [![@ds3nx/preact](https://img.shields.io/npm/v/@ds3nx/preact?label=%40ds3nx%2Fpreact&logo=nx)](https://www.npmjs.com/package/@ds3nx/preact)              |
+| 🔌 Plugin                                                                                                                         | 📦 Package                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| <a href="https://github.com/ds3engine/ds3nx/tree/main/packages/wmr"><img src="https://wmr.dev/assets/wmr.svg" width="48"> WMR</a> | [![@ds3nx/wmr](https://img.shields.io/npm/v/@ds3nx/wmr?label=%40ds3nx%2Fwmr&logo=nx)](https://www.npmjs.com/package/@ds3nx/wmr) |
 
 <br/>
+
+## install
+
+```
+npm install -D ds3nx
+```
+
+## Usage
+
+### Generating a workspace
+
+```
+npx create-nx-workspace org-workspace --preset=ds3nx
+```
+
+### Generating an application
+
+```
+nx generate ds3nx:app
+```
+
+### Generating an library
+
+```
+nx generate ds3nx:lib
+```
+
+### Generating a component
+
+```
+nx generate ds3nx:component
+```
+
+## Roadmap:
+
+- [ ] Complete generators for Route, Component and more
+- [ ] Complete `add-nx-to-wmr` and `create-wmr-nx`
+- [ ] Write missing tests
+- [ ] Move package.json scripts to project.json targets
+- [ ] more...
 
 ## Contributing
 
@@ -39,19 +82,19 @@ First off, thanks for taking the time to contribute! Contributions are what make
 
 Read our [CONTRIBUTING](CONTRIBUTING.md) guide to get started.
 
+<br/>
+
 ## Code of conduct
 
 Design System 3 is dedicated to providing a welcoming, diverse, and harrassment-free experience for everyone. We expect everyone in the NxKit community to abide by our [**Code of Conduct**](CODE_OF_CONDUCT.md). Please read it.
 
-## License
-
-This project is licensed under the **MIT License**.
-
-See [**LICENSE**](LICENSE) for more information.
+<br/>
 
 ## Maintainers
 
 [@uxtechie](https://github.com/uxtechie)
+
+<br/>
 
 ## Contributors ✨
 
@@ -82,12 +125,23 @@ See [**LICENSE**](LICENSE) for more information.
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
+<br/>
 
----
+## Related Links
+
+- [NX](https://nx.dev/)
+- [Design System 3](https://github.com/ds3engine/ds3)
+
+## License
+
+This project is licensed under the **MIT License**.
+
+See [**LICENSE**](LICENSE) for more information.
+
 <br/>
 
 ### Acknowledgments:
 
-* Scaffold based on [NxKit](https://github.com/nxkit) project.
+- Scaffold based on [NxKit](https://github.com/nxkit) project.
 
-* Code based on official [@nrwl/react](https://www.npmjs.com/package/@nrwl/react) npm package.
+- Code based on official [@nrwl/react](https://www.npmjs.com/package/@nrwl/react) npm package.
