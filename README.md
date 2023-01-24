@@ -5,10 +5,10 @@
   <br/>
 </p>
 
-<h1 align='center'>Design System 3 | NX Plugins</h1>
+<h1 align='center'>Design System 3 | Nx Plugins</h1>
 
 <div align='center'>
-  The <a href='https://nx.dev/'>NX</a> plugins for <a href='https://github.com/ds3engine'>Design System 3</a>
+  The <a href='https://nx.dev/'>Nx</a> plugins for <a href='https://github.com/ds3engine'>Design System 3</a>
   <br><br>
 
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
@@ -123,7 +123,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Related Links
 
-- [NX](https://nx.dev/)
+- [Nx](https://nx.dev/)
 - [Design System 3](https://github.com/ds3engine/ds3)
 
 ## License

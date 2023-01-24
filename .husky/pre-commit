@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm run check-lock-files
-pnpm run check-commit
-pnpm run pretty-quick --check
+pnpm run check-lock-files && \
+pnpm run check-commit && \
+pnpm run check-staged
