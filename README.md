@@ -76,25 +76,21 @@ nx generate ds3nx:component
 - [ ] Move package.json scripts to project.json targets
 - [ ] more...
 
+<br/>
+
 ## Contributing
 
 First off, thanks for taking the time to contribute! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**. Feel free to dive in and open an [new issue](https://github.com/ds3engine/nx/issues/new/choose) or submit a [Pull Request](https://github.com/ds3engine/nx/compare?expand=1).
 
 Read our [CONTRIBUTING](CONTRIBUTING.md) guide to get started.
 
-<br/>
-
 ## Code of conduct
 
 Design System 3 is dedicated to providing a welcoming, diverse, and harrassment-free experience for everyone. We expect everyone in the NxKit community to abide by our [**Code of Conduct**](CODE_OF_CONDUCT.md). Please read it.
 
-<br/>
-
 ## Maintainers
 
 [@uxtechie](https://github.com/uxtechie)
-
-<br/>
 
 ## Contributors ✨
 
@@ -125,8 +121,6 @@ Design System 3 is dedicated to providing a welcoming, diverse, and harrassment-
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-<br/>
-
 ## Related Links
 
 - [NX](https://nx.dev/)
@@ -137,8 +131,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 This project is licensed under the **MIT License**.
 
 See [**LICENSE**](LICENSE) for more information.
-
-<br/>
 
 ### Acknowledgments:
 
