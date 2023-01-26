@@ -23,20 +23,21 @@
   ],
   "private": true,
   "scripts": {
-    "build-all": "nx run-many --target build --all --parallel 8 --exclude utils-testing",
+    "build:all": "nx run-many --target build --all --parallel 8 --exclude utils-testing",
     "commit": "git-cz",
-    "check-commit": "node ./tools/scripts/commit-lint.js",
-    "check-format": "nx format:check --all",
-    "check-staged-test": "nx affected:test --parallel --uncommitted",
-    "check-staged-lint": "nx affected:lint --fix --parallel --uncommitted",
-    "check-staged-format": "nx format:write --uncommitted --libs-and-apps",
-    "check-staged": "pnpm run check-staged-test && pnpm run check-staged-lint && pnpm run check-staged-format",
-    "check-lock-files": "node ./tools/scripts/check-lock-files.js",
+    "check:commit": "node ./tools/scripts/commit-lint.js",
+    "check:format": "nx format:check --all",
+    "check:staged:test": "nx affected:test --parallel --uncommitted",
+    "check:staged:lint": "nx affected:lint --fix --parallel --uncommitted",
+    "check:staged:format": "nx format:write --uncommitted --libs-and-apps",
+    "check:staged": "pnpm run check:staged:test && pnpm run check:staged:lint && pnpm run check:staged:format",
+    "check:lock-files": "node ./tools/scripts/check-lock-files.js",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "pnpm audit",
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
+    "@jscutlery/semver": "2.29.X",
     "@nrwl/devkit": "15.6.X",
     "@nrwl/eslint-plugin-nx": "15.6.X",
     "@nrwl/jest": "15.6.X",
@@ -64,6 +65,7 @@
     "jest-environment-jsdom": "28.1.X",
     "jsonc-eslint-parser": "2.1.X",
     "lockfile-lint": "4.10.X",
+    "ngx-deploy-npm": "4.3.X",
     "nx": "15.6.X",
     "prettier": "2.8.X",
     "pretty-quick": "3.1.X",
@@ -92,5 +94,6 @@
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
-  }
+  },
+  "prettier": "./.prettierrc.js"
 }

@@ -12,7 +12,7 @@
   <br><br>
 
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![License](https://img.shields.io/github/license/ds3engine/ds3nx?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 [![CI](https://img.shields.io/github/actions/workflow/status/ds3engine/ds3nx/ci.yml?label=CI&style=flat-square)](https://github.com/ds3engine/ds3nx/actions/workflows/ci.yml)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ds3engine/ds3nx?style=flat-square)
@@ -20,7 +20,6 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![Star on GitHub](https://img.shields.io/github/stars/ds3engine/ds3nx.svg?style=social)](https://github.com/ds3engine/ds3nx/stargazers)
 
 </div>
 
