@@ -1,11 +1,11 @@
 module.exports = {
-  "singleQuote": true,
-  "overrides": [
+  singleQuote: true,
+  overrides: [
     {
-      "files": "*.swcrc",
-      "options": {
-        "parser": "json"
-      }
-    }
-  ]
-}
+      files: '*.swcrc',
+      options: {
+        parser: 'json',
+      },
+    },
+  ],
+};
