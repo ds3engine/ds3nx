@@ -55,6 +55,3 @@ nx-cloud.env
 
 # snyk
 .dccache
-
-# Other
-CHANGELOG.md

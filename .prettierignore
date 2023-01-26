@@ -3,3 +3,4 @@
 /dist
 /coverage
 tsconfig.base.json
+pnpm-lock.yaml

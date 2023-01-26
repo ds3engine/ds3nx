@@ -10,6 +10,7 @@ node_modules
 .eslintcache
 build/
 tsconfig.tsbuildinfo
+pnpm-lock.yaml
 **/*timestamp-*
 !.lintstagedrc.cjs
 !.eslintrc.cjs
