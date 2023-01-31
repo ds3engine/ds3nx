@@ -13,7 +13,6 @@
 
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
 ![License](https://img.shields.io/github/license/ds3engine/ds3nx?style=flat-square)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 [![CI](https://img.shields.io/github/actions/workflow/status/ds3engine/ds3nx/ci.yml?label=CI&style=flat-square)](https://github.com/ds3engine/ds3nx/actions/workflows/ci.yml)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ds3engine/ds3nx?style=flat-square)
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)]()

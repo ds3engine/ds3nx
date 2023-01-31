@@ -3,10 +3,23 @@
   "name": "wmr",
   "version": "0.0.1",
   "generators": {
-    "wmr": {
-      "factory": "./src/generators/wmr/generator",
-      "schema": "./src/generators/wmr/schema.json",
-      "description": "wmr generator"
+    "preset": {
+      "factory": "./src/generators/preset/generator",
+      "schema": "./src/generators/preset/schema.json",
+      "description": "Create a WMR Workspace Preset",
+      "hidden": true
+    },
+    "application": {
+      "factory": "./src/generators/application/generator",
+      "schema": "./src/generators/application/schema.json",
+      "description": "Create a WMR Application",
+      "aliases": ["app", "a"]
+    },
+    "library": {
+      "factory": "./src/generators/library/generator",
+      "schema": "./src/generators/library/schema.json",
+      "description": "Create a WMR Library",
+      "aliases": ["lib", "l"]
     }
   }
 }

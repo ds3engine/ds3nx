@@ -10,8 +10,8 @@ export default {
   displayName: 'wmr',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
+    '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
+  moduleFileExtensions: ['ts', 'js', 'tsx', 'jsx', 'html'],
   coverageDirectory: '../../coverage/packages/wmr',
 };

@@ -8,19 +8,16 @@ import {
   Tree,
 } from '@nrwl/devkit';
 import * as path from 'path';
-import { WmrGeneratorSchema } from './schema';
+import { LibraryGeneratorSchema } from './schema';
 
-interface NormalizedSchema extends WmrGeneratorSchema {
+interface NormalizedSchema extends LibraryGeneratorSchema {
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
   parsedTags: string[];
 }
 
-function normalizeOptions(
-  tree: Tree,
-  options: WmrGeneratorSchema
-): NormalizedSchema {
+function normalizeOptions(tree: Tree, options: LibraryGeneratorSchema): NormalizedSchema {
   const name = names(options.name).fileName;
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
@@ -41,33 +38,32 @@ function normalizeOptions(
 }
 
 function addFiles(tree: Tree, options: NormalizedSchema) {
-  const templateOptions = {
-    ...options,
-    ...names(options.name),
-    offsetFromRoot: offsetFromRoot(options.projectRoot),
-    template: '',
-  };
-  generateFiles(
-    tree,
-    path.join(__dirname, 'files'),
-    options.projectRoot,
-    templateOptions
-  );
+    const templateOptions = {
+      ...options,
+      ...names(options.name),
+      offsetFromRoot: offsetFromRoot(options.projectRoot),
+      template: ''
+    };
+    generateFiles(tree, path.join(__dirname, 'files'), options.projectRoot, templateOptions);
 }
 
-export default async function (tree: Tree, options: WmrGeneratorSchema) {
+export default async function (tree: Tree, options: LibraryGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
-  addProjectConfiguration(tree, normalizedOptions.projectName, {
-    root: normalizedOptions.projectRoot,
-    projectType: 'library',
-    sourceRoot: `${normalizedOptions.projectRoot}/src`,
-    targets: {
-      build: {
-        executor: '@ds3nx/wmr:build',
+  addProjectConfiguration(
+    tree,
+    normalizedOptions.projectName,
+    {
+      root: normalizedOptions.projectRoot,
+      projectType: 'library',
+      sourceRoot: `${normalizedOptions.projectRoot}/src`,
+      targets: {
+        build: {
+          executor: "@ds3nx/wmr:build",
+        },
       },
-    },
-    tags: normalizedOptions.parsedTags,
-  });
+      tags: normalizedOptions.parsedTags,
+    }
+  );
   addFiles(tree, normalizedOptions);
   await formatFiles(tree);
 }

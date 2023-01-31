@@ -15,7 +15,7 @@
           "packages/wmr/*.md",
           {
             "input": "./packages/wmr/src",
-            "glob": "**/!(*.ts)",
+            "glob": "**/!(*.tsx?)",
             "output": "./src"
           },
           {
@@ -42,6 +42,7 @@
       "options": {
         "lintFilePatterns": [
           "packages/wmr/**/*.ts",
+          "packages/wmr/**/*.tsx",
           "packages/wmr/generators.json",
           "packages/wmr/executors.json",
           "packages/wmr/package.json"

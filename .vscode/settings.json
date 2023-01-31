@@ -5,10 +5,14 @@
     "devkit",
     "esnext",
     "jscutlery",
+    "Mulet",
+    "myapp",
+    "myorg",
     "nrwl",
     "pnpm",
     "preact",
     "preinstall",
+    "stylesheet",
     "swcrc",
     "volta"
   ]

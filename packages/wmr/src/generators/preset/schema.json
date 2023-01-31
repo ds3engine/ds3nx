@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "WmrPreset",
+  "title": "Preset to init a WMR Nx Workspace",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?",
+      "pattern": "^[a-zA-Z].*$"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the project is placed"
+    },
+    "style": {
+      "description": "The file extension to be used for style files.",
+      "type": "string",
+      "default": "css",
+      "alias": "s",
+      "x-prompt": {
+        "message": "Which stylesheet format would you like to use?",
+        "type": "list",
+        "items": [
+          {
+            "value": "css",
+            "label": "CSS"
+          },
+          {
+            "value": "scss",
+            "label": "SASS(.scss)       [ http://sass-lang.com ]"
+          }
+        ],
+        "default": "css"
+      }
+    },
+    "strict": {
+      "type": "boolean",
+      "description": "Creates an application with strict mode and strict type checking.",
+      "default": true
+    },
+    "linter": {
+      "description": "The tool to use for running lint checks.",
+      "type": "string",
+      "enum": ["eslint", "none"],
+      "default": "eslint"
+    },
+    "unitTestRunner": {
+      "type": "string",
+      "enum": ["jest", "none"],
+      "description": "Test runner to use for unit tests.",
+      "default": "jest"
+    },
+    "e2eTestRunner": {
+      "type": "string",
+      "enum": ["playwright", "cypress", "none"],
+      "description": "Test runner to use for end to end (E2E) tests.",
+      "default": "playwright"
+    }
+  },
+  "required": ["name"]
+}

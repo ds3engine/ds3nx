@@ -1,7 +1,35 @@
 {
   "name": "@ds3nx/wmr",
   "version": "0.0.0",
+  "private": false,
+  "description": "The Nx Plugin for WMR Preact framework contains generators for managing Preact applications and libraries within an Nx workspace. It provides:\n\n\n- Integration with libraries such as Jest and Cypress.\n\n- Scaffolding for creating buildable libraries that can be published to npm.\n\n- Utilities for automatic workspace refactoring.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ds3engine/ds3nx",
+    "directory": "packages/wmr"
+  },
+  "keywords": [
+    "Monorepo",
+    "WMR",
+    "Preact",
+    "nx",
+    "nx-plugin",
+    "CLI"
+  ],
   "main": "src/index.js",
+  "typings": "./index.d.ts",
+  "author": "Julián Mulet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ds3engine/ds3nx/issues"
+  },
+  "homepage": "https://github.com/ds3engine/ds3nx/tree/main/packages/wmr",
   "generators": "./generators.json",
-  "executors": "./executors.json"
+  "executors": "./executors.json",
+  "dependencies": {
+    "@nrwl/rollup": "15.6.X"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

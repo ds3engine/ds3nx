@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "WmrApplication",
+  "title": "Create a WMR Application for Nx",
+  "examples": [
+    {
+      "command": "nx g app myapp --directory=myorg",
+      "description": "Generate `apps/myorg/myapp` and `apps/myorg/myapp-e2e`"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?",
+      "pattern": "^[a-zA-Z].*$"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the application (used for linting)",
+      "alias": "t"
+    },
+    "prefix": {
+      "type": "string",
+      "description": "Set application prefix (used for compiled named resources)"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the application is placed"
+    },
+    "skipPackageJson": {
+      "description": "Do not add dependencies to `package.json`.",
+      "type": "boolean",
+      "default": false,
+      "x-priority": "hidden"
+    },
+    "rootProject": {
+      "description": "Create a application at the root of the workspace",
+      "type": "boolean",
+      "default": false,
+      "hidden": true
+    },
+    "compiler": {
+      "type": "string",
+      "description": "The compiler to use",
+      "enum": ["swc", "babel"],
+      "default": "swc"
+    },
+    "bundler": {
+      "type": "string",
+      "description": "The bundler to use.",
+      "enum": ["rollup", "none"],
+      "default": "rollup",
+      "x-prompt": "Which bundler do you want to use?"
+    },
+    "linter": {
+      "description": "The tool to use for running lint checks.",
+      "type": "string",
+      "enum": ["eslint", "none"],
+      "default": "eslint"
+    },
+    "strict": {
+      "type": "boolean",
+      "description": "Creates an application with strict mode and strict type checking.",
+      "default": true
+    },
+    "skipFormat": {
+      "description": "Skip formatting files",
+      "type": "boolean",
+      "default": false,
+      "x-priority": "hidden"
+    },
+    "skipWorkspaceJson": {
+      "description": "Skip updating `workspace.json` with default options based on values provided to this app (e.g. babel, style).",
+      "type": "boolean",
+      "default": false,
+      "x-priority": "hidden"
+    },
+    "unitTestRunner": {
+      "type": "string",
+      "enum": ["jest", "none"],
+      "description": "Test runner to use for unit tests.",
+      "default": "jest"
+    },
+    "e2eTestRunner": {
+      "type": "string",
+      "enum": ["playwright", "cypress", "none"],
+      "description": "Test runner to use for end to end (E2E) tests.",
+      "default": "playwright"
+    },
+    "setParserOptionsProject": {
+      "type": "boolean",
+      "description": "Whether or not to configure the ESLint `parserOptions.project` option. We do not do this by default for lint performance reasons.",
+      "default": false
+    },
+    "style": {
+      "description": "The file extension to be used for style files.",
+      "type": "string",
+      "default": "css",
+      "alias": "s",
+      "x-prompt": {
+        "message": "Which stylesheet format would you like to use?",
+        "type": "list",
+        "items": [
+          {
+            "value": "css",
+            "label": "CSS"
+          },
+          {
+            "value": "scss",
+            "label": "SASS(.scss)       [ http://sass-lang.com ]"
+          }
+        ],
+        "default": "css"
+      }
+    }
+  },
+  "required": ["name"],
+  "examplesFile": "../../../docs/application-examples.md"
+}
